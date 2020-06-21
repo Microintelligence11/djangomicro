@@ -1,0 +1,49 @@
+{% extends 'basic.html' %}
+
+{% block title%} Microintelligence| Contact{% endblock %}
+{% block body %}
+<div class="text-center my-4">
+    <h2>Please Fill The Form For Buy Services!</h2>
+    <hr class="container">
+</div>
+<div class="container my-4">
+    <form action="contact" method="POST">  {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Enter Your Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Your Full Name Here!" name="name">
+        </div>
+        <div class="form-group">
+            <label for="Email">Email address</label>
+            <input type="email" class="form-control" id="Email" placeholder="example@gmail.com" name="email">
+        </div>
+        <div class="form-group">
+            <label for="number">Enter Your Number</label>
+            <input type="phone" class="form-control" id="number" placeholder="Enter Your Full Number Here!"
+                name="number">
+        </div>
+        <div class="form-group">
+            <label for="SelectServices">Please Select The Services</label>
+            <select class="form-control" id="SelectServices" name="cservices">
+                <option>Software Development</option>
+                <option>Web Development</option>
+                <option>Web Hosting</option>
+                <option>Web Designing</option>
+                <option>E-Commerce</option>
+                <option>Web Applications</option>
+                <option>Desktop Applications</option>
+                <option>Domain Hosting</option>
+                <option>Android Applications</option>
+                <option>Blog Development</option>
+                <option>Non Of This</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Textarea">Type Here Your Massage!</label>
+            <textarea class="form-control" id="Textarea" rows="10" name="textarea"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</div>
+
+{% endblock %}
